@@ -1,6 +1,6 @@
 ﻿int GetRandomNumber ()
 { 
-    int randomNumber = new Random().Next(0,100000);
+    int randomNumber = new Random().Next(0,10000);
     return randomNumber;
 }
 int randomValue = GetRandomNumber();
@@ -17,4 +17,8 @@ Console.WriteLine(secondNumber);
 if (randomValue >= 100)
 {
     Console.WriteLine($"Второе число: {secondNumber}");
+}
+else
+{
+    Console.WriteLine($"Второе число: {randomValue % 10}");
 }
