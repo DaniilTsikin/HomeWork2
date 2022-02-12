@@ -1,11 +1,17 @@
 ﻿int GetRandomNumber ()
 { 
-    int randomNumber = new Random().Next(0,1000);
+    int randomNumber = new Random().Next(0,100000);
     return randomNumber;
 }
 int randomValue = GetRandomNumber();
 Console.WriteLine($"Дано число: {randomValue}");
 
+while (randomValue > 999)
+{
+    randomValue = randomValue / 10;
+}
+
+Console.WriteLine($"Необходимый диапазон: {randomValue}");
 int secondNumber = (randomValue % 100 - randomValue % 10) / 10;
 Console.WriteLine(secondNumber);
 if (randomValue >= 100)
