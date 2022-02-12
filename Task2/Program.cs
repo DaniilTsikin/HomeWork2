@@ -5,7 +5,13 @@
 }
 int randomValue = GetRandomNumber();
 Console.WriteLine($"Дано число: {randomValue}");
-
+if (randomValue > 99)
+{
 int firstDigit = randomValue / 100;
 int secondDigit = randomValue % 10;
 Console.WriteLine($"{firstDigit}{secondDigit}");
+}
+else
+{
+    Console.WriteLine($"Число не трёхзначное: {randomValue}");
+}
